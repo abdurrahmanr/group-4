@@ -5,6 +5,7 @@
     margin: 0;
     font-family: Poppins, sans-serif;
     scroll-behavior: smooth;
+    color: white;
 }
 
 #hero {
@@ -31,6 +32,12 @@
     border: 2px solid #9be3fd;
     border-radius: 50%;
     width: 240px;
+    box-shadow: 0px 0px 72px 12px rgba(155,227,253,0.25);
+    transition: all 0.5s ease-out;
+}
+
+#hero .container .profile img:hover {
+    box-shadow: 0px 0px 72px 12px rgba(155,227,253,0.5);
 }
 
 #hero .text {
@@ -51,7 +58,7 @@
 #about {
     height: 100vh;
     width: 100%;
-    background-color: #24446c;
+    background-color: rgb(4, 15, 36);
 }
 
 .left-menu {
@@ -67,7 +74,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 75px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.97);
     color: white;
     position: -webkit-sticky;
     position: sticky;
@@ -108,6 +115,12 @@ nav .nav-menu .nav-link a{
 #about .container .left img {
     width: 250px;
     border-radius: 50%;
+    box-shadow: 0px 0px 72px 12px rgba(155,227,253,0.25);
+    transition: all 0.5s ease-out;
+}
+
+#about .container .left img:hover{
+    box-shadow: 0px 0px 72px 12px rgba(155,227,253,0.5);
 }
 
 #about .container .right {
@@ -138,10 +151,12 @@ nav .nav-menu .nav-link a{
 
 progress {
     text-align: center;
+    color: #ffffff;
     height: 32px;
-    accent-color: #000000;
+    accent-color: rgb(155, 227, 253);
     width: 450px;
-    padding: 5px 0px;
+    font-weight: bold;
+    padding: 3px 0px;
 }
 
 progress:after {
@@ -153,7 +168,7 @@ progress:after {
     padding-top: 60px;
     height: 150vh;
     width: 100%;
-    background-color: #24446c;
+    background-color: rgb(4, 15, 36);
 }
 
 #resume .container {
@@ -185,6 +200,11 @@ progress:after {
 #resume .container .left p {
     background-color: white;
     padding: 0px 24px;
+    color: black;
+}
+
+#resume .container .left b {
+    color: black;
 }
 
 #resume .container .right {
@@ -205,7 +225,7 @@ progress:after {
 
 #resume .container .left .timeline::before{
     content: "";
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
     position: absolute;
     left: 240px;
@@ -226,7 +246,12 @@ progress:after {
 
 #resume .container .right p {
     background-color: white;
+    color: black;
     padding: 0px 24px;
+}
+
+#resume .container .right b {
+    color: black;
 }
 
 #resume .container .right .timeline{
@@ -240,7 +265,7 @@ progress:after {
 
 #resume .container .right .timeline::before{
     content: "";
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
     position: absolute;
     left: 665px;
@@ -251,11 +276,11 @@ progress:after {
 
 #resume .timeline li::before {
     content: '';
-    background-color: #ffffff;
+    background-color: #000000;
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #000000;
+    border: 3px solid #ffffff;
     width: 20px;
     height: 20px;
     left: 228px;
@@ -263,7 +288,6 @@ progress:after {
 }
 
 #services {
-    padding-top: 60px;
     height: 75vh;
     width: 100%;
     text-align: center;
@@ -271,6 +295,7 @@ progress:after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(4, 15, 36);
 }
 
 #services .cards {
@@ -297,12 +322,23 @@ progress:after {
 }
 
 #contact {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),url(./src/a.jpg);
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./src/a.jpg);
     overflow: hidden;
     background-size: cover;
     color: white;
-    height: 75vh;
+    height: 70vh;
     width: 100%;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact a{
+    text-decoration: none;
+    color: white;
 }
 
 #contact .title {
@@ -310,9 +346,41 @@ progress:after {
     text-align: center;
 }
 
+#contact .desc {
+    padding-top: 12px;
+    text-align: center;
+}
+
+#contact .contacts {
+    display: flex;
+    padding-top: 56px;
+    gap: 120px;
+}
+
+#contact .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#contact .button-container {
+    display: flex;
+    gap: 24px;
+    padding-top: 48px;
+}
+
+#contact .button-container button {
+    border-radius: 24px;
+    padding: 8px 24px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
 footer {
     background-color: black;
-    padding: 24px 0;
+    padding: 12px 0;
     color: white;
     text-align: center;
 }
